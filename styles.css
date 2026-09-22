@@ -1,0 +1,145 @@
+:root {
+    --text-font: "JetBrains Mono", monospace;
+    --background-color: #dedcee;
+    --text-color: #17152b;
+    --header-background-color: #2109d6;
+    --link-color: #ffffff;
+    --hover-color: #b9b5ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--text-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+
+header {
+    /* background-color: var(--header-background-color); */
+    background-color: transparent;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav li {
+    background-color: #16069c;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin: 0;
+}
+
+header nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--hover-color);
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    /* padding-top: 80px; */
+    padding-top: 50px;
+}
+
+h1 {
+    color: var(--text-color);
+    margin: 25px 0 0;
+    font-size: 40px;
+}
+
+section {
+    margin: 30px 0;
+    padding: 25px;
+    background-color: #f4f3ff;
+    border-radius: 12px;
+}
+
+section ul {
+    padding: 0;
+    list-style: none;
+}
+
+section li {
+    margin: 10px;
+}
+
+article {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+a {
+    color: #2109d6;
+}
+
+footer {
+    padding: 5px;
+    background-color: #17152b;
+    color: white;
+}
+
+
+@media (max-width: 700px) {
+    header {
+        width: 100%;
+        position: unset;
+        box-sizing: border-box;
+        background-color: var(--header-background-color);
+    }
+    header nav ul {
+        padding: 10px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        padding-top: 10px;
+    }
+}
